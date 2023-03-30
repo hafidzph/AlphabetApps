@@ -14,7 +14,7 @@ import com.challenge.challengechapter3.Data.DataWords
 import com.challenge.challengechapter3.R
 import com.challenge.challengechapter3.databinding.ButtonDetailBinding
 
-class AbjadDetailAdapter(val listDetail: ArrayList<String> = DataDetails().detailWords): RecyclerView.Adapter<AbjadDetailAdapter.ViewHolder>() {
+class AbjadDetailAdapter(val listDetail: ArrayList<String>): RecyclerView.Adapter<AbjadDetailAdapter.ViewHolder>() {
     private var diffCallback = object : DiffUtil.ItemCallback<String>(){
         override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
             return oldItem == newItem
