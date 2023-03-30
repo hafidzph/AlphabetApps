@@ -31,7 +31,8 @@ class DetailAbjadFragment : Fragment() {
         val filteredData = arrayListOf<String>()
         for (i in 0 until dataDetails.detailWords.size){
             println(dataAbjad.equals(dataDetails.detailWords[i].substring(0, 1)))
-            if(dataAbjad.equals(dataDetails.detailWords[i].substring(0, 1))) filteredData.add(dataDetails.detailWords[i])
+            if(dataAbjad.equals(dataDetails.detailWords[i].substring(0, 1)))
+                filteredData.add(dataDetails.detailWords[i])
         }
         val adapter = AbjadDetailAdapter(filteredData)
         adapter.submitData()

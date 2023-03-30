@@ -34,7 +34,7 @@ class AbjadFragment : Fragment() {
         }
 
         recyclerView = view.findViewById(R.id.abjad)
-        val adapter = AbjadAdapter(requireContext())
+        val adapter = AbjadAdapter()
 
         adapter.submitData(listAbjad)
 

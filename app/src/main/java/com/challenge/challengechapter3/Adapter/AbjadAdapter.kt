@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +18,7 @@ import com.challenge.challengechapter3.DetailAbjadFragment
 import com.challenge.challengechapter3.R
 
 
-class AbjadAdapter(val context: Context): RecyclerView.Adapter<AbjadAdapter.ViewHolder>() {
+class AbjadAdapter(): RecyclerView.Adapter<AbjadAdapter.ViewHolder>() {
     private var diffCallback = object : DiffUtil.ItemCallback<DataWords>(){
         override fun areItemsTheSame(oldItem: DataWords, newItem: DataWords): Boolean {
             return oldItem == newItem
@@ -49,12 +51,7 @@ class AbjadAdapter(val context: Context): RecyclerView.Adapter<AbjadAdapter.View
         holder.button.setOnClickListener{
             val bundle = Bundle()
             bundle.putString("DATA_ABJAD", data.listAbjad)
-            val detailAbjadFragment = DetailAbjadFragment()
-            detailAbjadFragment.arguments = bundle
-            (context as AppCompatActivity).supportFragmentManager.beginTransaction()
-                .replace(R.id.frame, detailAbjadFragment)
-                .addToBackStack(null)
-                .commit()
+            holder.itemView.findNavController().navigate(R.id.action_abjadFragment_to_detailAbjadFragment, bundle)
         }
     }
 
