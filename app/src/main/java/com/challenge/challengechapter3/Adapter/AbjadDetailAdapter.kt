@@ -12,8 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.challenge.challengechapter3.Data.DataDetails
 import com.challenge.challengechapter3.Data.DataWords
 import com.challenge.challengechapter3.R
+import com.challenge.challengechapter3.databinding.ButtonDetailBinding
 
-class AbjadDetailAdapter(val listDetail: ArrayList<String> = DataDetails().detailWords): RecyclerView.Adapter<AbjadDetailAdapter.ViewHolder>() {
+class AbjadDetailAdapter(val listDetail: ArrayList<String>): RecyclerView.Adapter<AbjadDetailAdapter.ViewHolder>() {
     private var diffCallback = object : DiffUtil.ItemCallback<String>(){
         override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
             return oldItem == newItem
@@ -28,21 +29,19 @@ class AbjadDetailAdapter(val listDetail: ArrayList<String> = DataDetails().detai
 
     fun submitData() = differ.submitList(listDetail)
 
-    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val button : Button = itemView.findViewById(R.id.btnDetail)
-    }
+    inner class ViewHolder(val binding: ButtonDetailBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int,
     ): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.button_detail, parent, false)
+        val view = ButtonDetailBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.button.text = differ.currentList[position]
-        holder.button.setOnClickListener {
+        holder.binding.btnDetail.text = differ.currentList[position]
+        holder.binding.btnDetail.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=${differ.currentList[position]}"))
             holder.itemView.context.startActivity(intent)
         }
