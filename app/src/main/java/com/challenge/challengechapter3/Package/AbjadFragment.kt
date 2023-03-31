@@ -1,4 +1,4 @@
-package com.challenge.challengechapter3
+package com.challenge.challengechapter3.Package
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.challenge.challengechapter3.Adapter.AbjadAdapter
 import com.challenge.challengechapter3.Data.DataWords
+import com.challenge.challengechapter3.R
 import com.challenge.challengechapter3.databinding.FragmentAbjadBinding
 
 class AbjadFragment : Fragment() {

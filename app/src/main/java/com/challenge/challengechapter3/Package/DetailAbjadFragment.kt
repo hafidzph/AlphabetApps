@@ -1,16 +1,13 @@
-package com.challenge.challengechapter3
+package com.challenge.challengechapter3.Package
 
 import android.os.Bundle
-import android.provider.ContactsContract.Data
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.challenge.challengechapter3.Adapter.AbjadAdapter
 import com.challenge.challengechapter3.Adapter.AbjadDetailAdapter
 import com.challenge.challengechapter3.Data.DataDetails
-import com.challenge.challengechapter3.Data.DataWords
 import com.challenge.challengechapter3.databinding.FragmentDetailAbjadBinding
 
 class DetailAbjadFragment : Fragment() {

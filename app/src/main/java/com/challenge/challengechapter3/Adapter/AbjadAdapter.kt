@@ -1,20 +1,14 @@
 package com.challenge.challengechapter3.Adapter
 
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.challenge.challengechapter3.Data.DataWords
-import com.challenge.challengechapter3.DetailAbjadFragment
 import com.challenge.challengechapter3.R
 import com.challenge.challengechapter3.databinding.ButtonAbjadBinding
 
