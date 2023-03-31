@@ -1,4 +1,4 @@
-package com.challenge.challengechapter3.Package
+package com.challenge.challengechapter3.Fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle

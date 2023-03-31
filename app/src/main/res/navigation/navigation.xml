@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/abjadFragment"
-        android:name="com.challenge.challengechapter3.Package.AbjadFragment"
+        android:name="com.challenge.challengechapter3.Fragment.AbjadFragment"
         android:label="AbjadFragment" >
         <action
             android:id="@+id/action_abjadFragment_to_detailAbjadFragment"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/detailAbjadFragment"
-        android:name="com.challenge.challengechapter3.Package.DetailAbjadFragment"
+        android:name="com.challenge.challengechapter3.Fragment.DetailAbjadFragment"
         android:label="DetailAbjadFragment" />
 </navigation>
